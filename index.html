@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>קורס חיבור לטבע</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    background-color: #fdf9f3;
+    color: #4a4a4a;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+    background-image: url('images/branch.jpg'), url('images/branch.jpg'); /* ענפים בשני הצדדים */
+    background-position: -60% center, 160% center; /* דוחף את התמונות עוד יותר לשוליים */
+    background-repeat: no-repeat; /* למנוע חזרה */
+    background-size: auto 100vh; /* התאמה לגובה הדף */
+    background-attachment: fixed; /* להשאיר את הענפים קבועים */
+}
+
+
+.cta-button {
+    display: inline-block;
+    margin-top: 30px;
+    background: #ff6600;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+}
+        .container 
+		{
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #8fbc8f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1;
+            z-index: 9999;
+        }
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        button {
+            background-color: #6c935c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #587a46;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: #6c935c;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #4a7042;
+        }
+		.circle-image {
+		    width: 50%;
+    border-radius: 50%;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: right;
+}
+
+ul li {
+    position: relative;
+    padding-right: 30px;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    margin-bottom: 15px; 
+
+}
+
+ul li::before {
+    content: '\f06c'; /* קוד Unicode של עלה */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 0;
+    color: #6c935c; /* ירוק טבעי */
+    font-size: 20px;
+}
+sa li::before {
+    content: 🍀;
+	}
+sa li.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.social-links-header {
+    position: fixed; /* הצמדת האייקונים לחלון הדפדפן */
+    top: 10px; /* מרחק מהחלק העליון */
+    right: 30px; /* מרחק מהצד הימני */
+    display: flex;
+    gap: 15px; /* רווח בין האייקונים */
+    z-index: 1000; /* לוודא שהם תמיד למעלה */
+}
+
+.social-links-header a {
+    font-size: 30px; /* גודל האייקונים */
+    text-decoration: none; /* הסרת קו תחתון */
+    color: black; /* צבע ברירת מחדל */
+    transition: transform 0.2s ease;
+	color: inherit; /* ישמור על הצבעים המוגדרים לכל אייקון */
+    text-decoration: none;
+}
+
+.social-links-header a:hover {
+    transform: scale(1.2); /* הגדלה בעת מעבר עכבר */
+}
+
+
+.social-links-header .instagram {
+    color: #E4405F; /* צבע אינסטגרם */
+}
+
+.social-links-header .facebook {
+    color: #1877F2; /* צבע פייסבוק */
+}
+
+.social-links-header .whatsapp {
+    color: #25D366; /* צבע וואטסאפ */
+}
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+    <div class="loading-screen" id="loading">טוען...</div>
+    <div class="container">
+<div class="social-links-header">
+    <a href="https://wa.me/972528588102" target="_blank" class="whatsapp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=100064348981742" target="_blank" class="facebook">
+        <i class="fa-brands fa-facebook"></i>
+    </a>
+	    <a href="https://www.instagram.com/_gift_of_nature?utm_source=qr&igsh=MTZicTNheGZpaGl6MA==" target="_blank" class="instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+</div>
+
+    <img class="circle-image" src="images/logo.jpg" alt="לוגו מתנת האדמה" width="100%" height="100%">
+
+
+
+        <p class="fade-in">🍀 בימי קדם, בכל משפחה שבט או כפר, הייתה "רוקחת הכפר" - זאת שידעה את סודות הצמחים, רקחה מהם מרקחות, השתמשה בהם לריפוי ולטיפוח לכל הסובבים אותה. בכל בית היו צנצנות מלאות במרקחות מרפא מצמחים מקומיים לשימוש ולרפואת בני המשפחה והשבט...</p>
+        <p class="fade-in">🍀 מאז שאני זוכרת את עצמי, בכל פעם שפגשתי בטיול, או במרעה עם העדר הקטן שלנו "אישה חכמה" – כזאת שמלקטת צמחים בצדי הדרכים, הייתי שואלת אותה ולומדת ממנה. ככל ששאלתי וחקרתי העמיק בי הרצון ללמוד עוד ובשנת 2007 יצאתי למסע ארוך ומרתק של לימודי רפואה טבעית והוליסטית.</p>
+         <p class="fade-in">🍀 לאחר שנים של לימוד מעמיק, ניסיון, ועבודה בקליניקה - הקמתי מתוך תשוקה גדולה את "מתנת האדמה- הבית לרוקחות טבעית."</p>
+
+<video class="fade-in" width="100%" controls poster = "images/thumbnail.png">
+    <source src="images/atmosphere.mp4" type="video/mp4">
+</video>
+		
+                <p class="fade-in">☘️ שמי שלומית כהן, אמא ל 6 (וגם סבתא לנכד מתוק!) נשואה באהבה לתומר, וגרה באוהל קסום ביער בהרי יהודה. מורה בכירה לרוקחות טבעית, ארומתרפיסטית , מטפלת בצמחי מרפא, בפרחי באך, רפלקסולוגיה ולקטית צמחי רפואה.</p>
+                <p class="fade-in">☘️ מאז ומתמיד יש לי משיכה לחקור וללמוד על המתנות שהטבע מעניק לנו ובעשור האחרון אני עוסקת בחיבור בין אנשים לטבע ובקידום אורח חיים של בריאות, הרמוניה וקרבה לאדמה ולפשטות.</p>
+                <p class="fade-in">☘️ מוצרי הריפוי והטיפוח שלנו נרקחים מחומרי גלם טבעיים איכותיים ביותר ומצמחי בר, בדגש על צמחים מקומיים שאני מלקטת טריים בעונתם, מהאדמה הזו שאני כל כך מחוברת אליה. הפורמולות שיצרתי ופיתחתי במשך שנים, מבוססות על ידע מקצועי, ניסיון רב ותשומת לב.</p>
+                <p class="fade-in">☘️ מאז ומתמיד יש לי משיכה לחקור וללמוד על המתנות שהטבע מעניק לנו ובעשור האחרון אני עוסקת בחיבור בין אנשים לטבע ובקידום אורח חיים של בריאות, הרמוניה וקרבה לאדמה ולפשטות.</p>
+				<p class="fade-in">☘️	אני מזמינה אתכם ליהנות ממוצרי הריפוי והטיפוח הטבעיים שלנו, הנרקחים מחומרי גלם טבעיים, איכותיים ועם המון אהבה.</p>
+				<p class="fade-in">☘️ בקורסים ובסדנאות שלנו אתם מוזמנים לצלול יחד איתי לעולם של ניחוחות קסומים וסודות של צמחים<br> ולתת לעצמכם מתנה- את מתנת האדמה.</p>
+       <section>
+	   <h2 class="fade-in">🌳 🌼קורס הרוקחות הטבעית 🌼 🌳</h2>
+				<img src="images/course.jpg" alt="קורס מתנת האדמה" width="100%">
+			<button id="downloadPdf">להורדת סילבוס</button>
+<p>
+    פרטים נוספים על הקורס ופרטי תשלום, ניתן לקבל בוואטסאפ או להשאיר פרטים(קישור
+    <a href="#contact">למטה)</a>.
+    </a>
+</p>
+				<p>טעימה קטנה מהקורס 🍏</p>
+			<video class="fade-in" width="100%" controls poster = "images/CoueseSnap.png">
+				<source src="images/Course.mp4" type="video/mp4">
+			</video>
+		</section>
+	  <h2> 🌳 סדנאות זוגיות וקבוצתיות 🌳 </h2>
+
+<ul id="course-list">
+		<li class="fade-in">סדנת הלחנת בושם טבעי- נכיר את הריחות השונים, וכיצד לשלבם בצורה מאוזנת , להתאים את השמנים האתריים למטרה שנרצה- השמנים האתריים משפיעים לטובה על הגוף ועל הנפש, ולכן נוכל לרקוח בהתאמה אישית( מרגיע/ מרומם/ מחזק ביטחון עצמי ועוד).
+
+כל משתתף ירקח בושם טבעי בהתאמה אישית, חוויה מדהימה. 
+משך הסדנא: שעה. 
+
+ אופציה לסדנא מורחבת- שעה וחצי -
+ רקיחת 2 סוגי בשמים ( אחד על בסיס שמן, אחד על בסיס אלכוהול) 
+</li>
+<li class="fade-in">סדנת רקיחת מוצרי ספא - 2 מוצרים לבחירה - שמן עיסוי\מסיכת פנים\פילינג\\מי פנים\מלח אמבט ארומטי. <br> משך הסדנא - שעה ורבע</li>
+<li class="fade-in">סדנת ליקוט + משחת מרפא. 
+נצא  אל הטבע הקרוב , נלקט צמחי מרפא המרגיעים ומיטיבים עם העור, ונרקח מהם משחת מרפא טבעית ייחודית לעור. 
+כל משתתף מקבל משחה בצנצנת של 20 מל.</li>
+<li class="fade-in">סדנת סבון טבעי- 
+נלמד את סודות רקיחת הסבון הטבעי, כיצד להתאים אותו לסוג העור,  נרקח סבון, וכל משתתף יוסיף לו את  התוספות שמתאימות לו. מכוון של צבעים/ ריחות/ טקסטורות. 
+כל משתתף יוצא עם סבון של כ 200 גר. השימוש בסבון רק לאחר חודש של הבשלה מיום ההכנה. 
+משך הסדנא כשעה ורבע. </li>
+</ul>
+		
+
+<h2 class="fade-in">🌿 להתחבר לטבע ולנשום, ברגליים יחפות, היישר מן האדמה... 🌿</h2>
+<video class="fade-in" width="100%" controls poster = "images/atmosphere2Snap.png">
+    <source src="images/atmosphere2.mp4" type="video/mp4">
+</video>
+        
+        
+	<section>
+		<div class	="wrapper" id="contact">
+			<iframe src="colorlib-regform-23/details.html" width="100%" height="700px" style="border:none;"></iframe>
+		</div>
+    </section>
+    </div>
+    
+<script>
+    window.addEventListener("load", function() {
+        document.getElementById("loading").classList.add("hidden");
+        let elements = document.querySelectorAll(".fade-in");
+        elements.forEach((el, index) => {
+            setTimeout(() => {
+                el.classList.add("show");
+            }, index * 100);
+        });
+    let listItems = document.querySelectorAll("#course-list li");
+    listItems.forEach((li, index) => {
+        setTimeout(() => {
+            li.classList.add("show");
+        }, index * 400);
+    });
+                });
+
+    document.getElementById("downloadPdf").addEventListener("click", function() {
+        const link = document.createElement("a");
+        link.href = "files/syllabus.pdf"; // ודא שהנתיב נכון
+        link.setAttribute("download", "syllabus.pdf"); // מחייב הורדה במקום פתיחה
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+</script>
+
+</body>
+</html>
