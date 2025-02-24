@@ -34,194 +34,54 @@ body {
 
     background-image: url('images/branch.jpg'), url('images/branch.jpg'); /* ענפים בשני הצדדים */
     background-position: -60% center, 160% center; /* דוחף את התמונות עוד יותר לשוליים */
-    background-repeat: no-repeat; /* למנוע חזרה */
-    background-size: auto 100vh; /* התאמה לגובה הדף */
-    background-attachment: fixed; /* להשאיר את הענפים קבועים */
+    background-repeat: no-repeat;
+    background-size: auto 100vh;
+    background-attachment: fixed;
 }
 
-
-.cta-button {
-    display: inline-block;
-    margin-top: 30px;
-    background: #ff6600;
-    color: white;
-    padding: 15px 30px;
-    font-size: 20px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.cta-button:hover {
-    transform: scale(1.1);
-}
-        .container 
-		{
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-        }
-        .fade-in.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #8fbc8f;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 24px;
-            transition: opacity 0.5s ease-in-out;
-            opacity: 1;
-            z-index: 9999;
-        }
-        .hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-        button {
-            background-color: #6c935c;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        button:hover {
-            background-color: #587a46;
-        }
-        .social-icons a {
-            margin: 0 10px;
-            color: #6c935c;
-            font-size: 24px;
-            transition: color 0.3s;
-        }
-        .social-icons a:hover {
-            color: #4a7042;
-        }
-		.circle-image {
-		    width: 50%;
-    border-radius: 50%;
-}
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    text-align: right;
-}
-
-ul li {
-    position: relative;
-    padding-right: 30px;
-    font-size: 18px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    margin-bottom: 15px; 
-
-}
-
-ul li::before {
-    content: '\f06c'; /* קוד Unicode של עלה */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    position: absolute;
-    right: 0;
-    color: #6c935c; /* ירוק טבעי */
-    font-size: 20px;
-}
-sa li::before {
-    content: 🍀;
-	}
-sa li.show {
-    opacity: 1;
-    transform: translateY(0);
-}
+/* אייקוני רשתות חברתיות */
 .social-links-header {
-    position: fixed; /* הצמדת האייקונים לחלון הדפדפן */
-    top: 10px; /* מרחק מהחלק העליון */
-    right: 30px; /* מרחק מהצד הימני */
+    position: fixed;
+    top: 10px;
+    right: 10px;
     display: flex;
-    gap: 15px; /* רווח בין האייקונים */
-    z-index: 1000; /* לוודא שהם תמיד למעלה */
+    flex-direction: column; /* האייקונים יהיו בטור */
+    align-items: flex-end; /* מצמיד אותם לצד ימין */
+    gap: 5px;
+    z-index: 1000;
 }
 
 .social-links-header a {
-    font-size: 30px; /* גודל האייקונים */
-    text-decoration: none; /* הסרת קו תחתון */
-    color: black; /* צבע ברירת מחדל */
-    transition: transform 0.2s ease;
-	color: inherit; /* ישמור על הצבעים המוגדרים לכל אייקון */
+    font-size: 28px;
     text-decoration: none;
+    transition: transform 0.2s ease;
+    color: inherit;
 }
 
 .social-links-header a:hover {
-    transform: scale(1.2); /* הגדלה בעת מעבר עכבר */
+    transform: scale(1.1);
 }
 
+/* צבעים מותאמים לכל אייקון */
+.social-links-header .instagram { color: #E4405F; }
+.social-links-header .facebook { color: #1877F2; }
+.social-links-header .whatsapp { color: #25D366; }
 
-.social-links-header .instagram {
-    color: #E4405F; /* צבע אינסטגרם */
-}
-
-.social-links-header .facebook {
-    color: #1877F2; /* צבע פייסבוק */
-}
-
-.social-links-header .whatsapp {
-    color: #25D366; /* צבע וואטסאפ */
-}
-
+/* התאמות למובייל */
 @media (max-width: 600px) {
-    .social-links-header {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* ממרכז את האייקונים בטור */
-        position: fixed;
-        right: 10px; /* מצמיד לשוליים הימניים */
-        top: 10px; /* מיקום מלמעלה */
-        gap: 8px; /* ריווח אחיד ביניהם */
+    body {
+        background-image: none; /* ביטול התמונה במובייל */
     }
-    .social-links-header a {
-        font-size: 20px; /* גודל אחיד לאייקונים */
-        display: block; /* מסדר אותם בטור */
-    }
-}
 
-@media (max-width: 600px) {
     h1 {
         font-size: 24px;
     }
+    
     h2 {
         font-size: 20px;
     }
 }
 
-@media (max-width: 600px) {
-    body {
-        background-image: none;
-        background-color: #fdf9f3; /* שמירה על צבע הרקע */
-    }
-}
 
 
 
