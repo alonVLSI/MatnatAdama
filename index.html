@@ -191,19 +191,21 @@ sa li.show {
 }
 
 @media (max-width: 600px) {
-    .social-icons, .social-links-header {
+    .social-links-header {
         display: flex;
         flex-direction: column;
-        align-items: flex-end; /* מצמיד לימין (או לשמאל אם רוצים) */
-        position: absolute;
+        align-items: center; /* ממרכז את האייקונים בטור */
+        position: fixed;
         right: 10px; /* מצמיד לשוליים הימניים */
-        top: 10px; /* אפשר לשנות לפי הצורך */
+        top: 10px; /* מיקום מלמעלה */
+        gap: 8px; /* ריווח אחיד ביניהם */
     }
-    .social-icons a {
-        margin: 3px 0; /* מקטין את הרווחים בין האייקונים */
-        font-size: 26px; /* אפשר גם להקטין קצת את הגודל */
+    .social-links-header a {
+        font-size: 26px; /* גודל אחיד לאייקונים */
+        display: block; /* מסדר אותם בטור */
     }
 }
+
 @media (max-width: 600px) {
     h1 {
         font-size: 24px;
