@@ -194,13 +194,11 @@ button {
 
 @media (max-width: 767px) {
   h3 {
-    font-size: 38px;
-  }
+    font-size: 38px; }
 
   p {
     font-size: 14px;
-    padding: 0;
-  }
+    padding: 0; }
 
   .inner {
     padding: 27px 20px 37px;
@@ -209,16 +207,18 @@ button {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     -ms-box-shadow: none;
-    -o-box-shadow: none;
-    background: url('../images/foot.jpg') no-repeat center center;
-    background-size: cover;
-  }
+    -o-box-shadow: none; 
+	}
 
   .wrapper {
     background: #39459b;
-    border: 10px solid #0d99d7;
+    border: 10px solid #0d99d7; } }
+	
+@media (max-width: 767px) {
+  .wrapper {
+    background: url("../images/bg-registration-form-7.jpg") no-repeat center center;
+    background-size: cover;
   }
 }
-
 
 /*# sourceMappingURL=style.css.map */
