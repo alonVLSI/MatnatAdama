@@ -12,13 +12,13 @@
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="קורס רוקחות טבעית - מתנת האדמה">
 <meta property="og:description" content="למדו כיצד לרקוח מוצרים טבעיים בבית! קורס וסדנאות עם שלומית כהן.">
-<meta property="og:image" content="https://yourwebsite.com/images/course.jpg">
-<meta property="og:url" content="https://yourwebsite.com">
+<meta property="og:image" content="https://matnadadama.netlify.app/course.jpg">
+<meta property="og:url" content="https://matnadadama.netlify.app/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="קורס רוקחות טבעית - מתנת האדמה">
 <meta name="twitter:description" content="למדו כיצד לרקוח מוצרים טבעיים בבית! קורס וסדנאות עם שלומית כהן.">
-<meta name="twitter:image" content="https://yourwebsite.com/images/course.jpg">
+<meta name="twitter:image" content="https://matnadadama.netlify.app/images/course.jpg">
 
 
     <style>
@@ -191,15 +191,15 @@ sa li.show {
     color: #25D366; /* צבע וואטסאפ */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
     .social-links-header {
         display: flex;
         flex-direction: column;
         align-items: center; /* ממרכז את האייקונים בטור */
-        position: fixed;
-        right: 10px; /* מצמיד לשוליים הימניים */
-        top: 10px; /* מיקום מלמעלה */
-        gap: 8px; /* ריווח אחיד ביניהם */
+    top: 20px;  /* רווח מלמעלה */
+    right: 20px;  /* רווח מצד ימין */
+    z-index: 1000;  /* מבטיח שהאייקונים יהיו מעל כל תוכן אחר */
+    gap: 15px;  /* רווח בין האייקונים */
     }
     .social-links-header a {
         font-size: 20px; /* גודל אחיד לאייקונים */
@@ -221,6 +221,11 @@ sa li.show {
         background-image: none;
         background-color: #fdf9f3; /* שמירה על צבע הרקע */
     }
+}
+@media (max-width: 767px) {
+  .social-links {
+
+  }
 }
 
 
