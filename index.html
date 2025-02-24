@@ -193,13 +193,14 @@ sa li.show {
 
 @media (max-width: 767px) {
     .social-links-header {
+        position: fixed; /* מיקום קבוע */
+        top: 20px;  /* רווח מלמעלה */
+        right: 20px;  /* רווח מצד ימין */
+        z-index: 1000;  /* מבטיח שהאייקונים יהיו מעל כל תוכן אחר */
         display: flex;
         flex-direction: column;
         align-items: center; /* ממרכז את האייקונים בטור */
-    top: 20px;  /* רווח מלמעלה */
-    right: 20px;  /* רווח מצד ימין */
-    z-index: 1000;  /* מבטיח שהאייקונים יהיו מעל כל תוכן אחר */
-    gap: 15px;  /* רווח בין האייקונים */
+        gap: 15px;  /* רווח בין האייקונים */
     }
     .social-links-header a {
         font-size: 20px; /* גודל אחיד לאייקונים */
@@ -221,11 +222,6 @@ sa li.show {
         background-image: none;
         background-color: #fdf9f3; /* שמירה על צבע הרקע */
     }
-}
-@media (max-width: 767px) {
-  .social-links {
-
-  }
 }
 
 
