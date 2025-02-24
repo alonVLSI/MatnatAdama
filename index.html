@@ -193,22 +193,20 @@ sa li.show {
 
 @media (max-width: 767px) {
     .social-links-header {
-        position: fixed; /* מיקום קבוע */
-        top: 20px;  /* רווח מלמעלה */
-        right: 20px;  /* רווח מצד ימין */
-        z-index: 1000;  /* מבטיח שהאייקונים יהיו מעל כל תוכן אחר */
+        position: fixed; /* הצמדת האייקונים לחלון הדפדפן */
+        top: 10px; /* מרחק מהחלק העליון */
+        right: 30px; /* מרחק מהצד הימני */
         display: flex;
-        flex-direction: column;
-        align-items: center; /* ממרכז את האייקונים בטור */
-        gap: 15px;  /* רווח בין האייקונים */
+        flex-direction: column; /* הופך את האייקונים לעמוד */
+        gap: 15px; /* רווח בין האייקונים */
+        z-index: 1000; /* לוודא שהם תמיד למעלה */
     }
     .social-links-header a {
         font-size: 20px; /* גודל אחיד לאייקונים */
         display: block; /* מסדר אותם בטור */
-		position: fixed; /* מיקום קבוע */
-
     }
 }
+
 
 @media (max-width: 600px) {
     h1 {
