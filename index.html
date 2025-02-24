@@ -31,80 +31,89 @@ body {
     margin: 0;
     padding: 0;
     min-width: 100vw;
-
-    background-image: url('images/branch.jpg'), url('images/branch.jpg'); /* ענפים בשני הצדדים */
-    background-position: -60% center, 160% center; /* דוחף את התמונות עוד יותר לשוליים */
-    background-repeat: no-repeat; /* למנוע חזרה */
-    background-size: auto 100vh; /* התאמה לגובה הדף */
-    background-attachment: fixed; /* להשאיר את הענפים קבועים */
+    
+    background-image: url('images/branch.jpg'), url('images/branch.jpg');
+    background-position: -60% center, 160% center;
+    background-repeat: no-repeat;
+    background-size: auto 100vh;
+    background-attachment: fixed;
 }
 
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+    background-color: rgba(253, 249, 243, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
 
-.cta-button {
-    display: inline-block;
-    margin-top: 30px;
-    background: #ff6600;
-    color: white;
-    padding: 15px 30px;
-    font-size: 20px;
-    font-weight: bold;
+video, img, iframe {
+    max-width: 100%;
+    display: block;
+    margin: 20px auto;
+}
+
+iframe {
+    width: 100%;
+    height: 120vh;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s;
+    overflow: hidden;
 }
 
-.cta-button:hover {
-    transform: scale(1.1);
+h1, h2, p {
+    word-wrap: break-word;
+    text-align: center;
 }
-        .container 
-		{
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-        }
-        .fade-in.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-        button {
-            background-color: #6c935c;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        button:hover {
-            background-color: #587a46;
-        }
-        .social-icons a {
-            margin: 0 10px;
-            color: #6c935c;
-            font-size: 24px;
-            transition: color 0.3s;
-        }
-        .social-icons a:hover {
-            color: #4a7042;
-        }
-		.circle-image {
-		    width: 50%;
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+button {
+    background-color: #6c935c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #587a46;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #6c935c;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #4a7042;
+}
+
+.circle-image {
+    width: 50%;
     border-radius: 50%;
-}
-ul {
-    list-style: none;
-    padding: 0;
+    display: block;
+    margin: 0 auto;
 }
 
 ul {
@@ -120,80 +129,71 @@ ul li {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    margin-bottom: 15px; 
-
+    margin-bottom: 15px;
 }
 
 ul li::before {
-    content: '\f06c'; /* קוד Unicode של עלה */
+    content: '\f06c';
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     position: absolute;
     right: 0;
-    color: #6c935c; /* ירוק טבעי */
+    color: #6c935c;
     font-size: 20px;
 }
-sa li::before {
-    content: 🍀;
-	}
-sa li.show {
-    opacity: 1;
-    transform: translateY(0);
-}
+
 .social-links-header {
-    position: fixed; /* הצמדת האייקונים לחלון הדפדפן */
-    top: 10px; /* מרחק מהחלק העליון */
-    right: 30px; /* מרחק מהצד הימני */
+    position: fixed;
+    top: 10px;
+    right: 30px;
     display: flex;
-    gap: 15px; /* רווח בין האייקונים */
-    z-index: 1000; /* לוודא שהם תמיד למעלה */
+    gap: 15px;
+    z-index: 1000;
 }
 
 .social-links-header a {
-    font-size: 30px; /* גודל האייקונים */
-    text-decoration: none; /* הסרת קו תחתון */
-    color: black; /* צבע ברירת מחדל */
-    transition: transform 0.2s ease;
-	color: inherit; /* ישמור על הצבעים המוגדרים לכל אייקון */
+    font-size: 30px;
     text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease;
 }
 
 .social-links-header a:hover {
-    transform: scale(1.2); /* הגדלה בעת מעבר עכבר */
+    transform: scale(1.2);
 }
 
-
 .social-links-header .instagram {
-    color: #E4405F; /* צבע אינסטגרם */
+    color: #E4405F;
 }
 
 .social-links-header .facebook {
-    color: #1877F2; /* צבע פייסבוק */
+    color: #1877F2;
 }
 
 .social-links-header .whatsapp {
-    color: #25D366; /* צבע וואטסאפ */
+    color: #25D366;
 }
 
 @media (max-width: 767px) {
     .social-links-header {
-        position: absolute; /* הצמדת האייקונים לחלון הדפדפן */
-        top: 10px; /* מרחק מהחלק העליון */
-        right: 30px; /* מרחק מהצד הימני */
-        flex-direction: column; /* הופך את האייקונים לעמוד */
-        gap: 15px; /* רווח בין האייקונים */
+        position: absolute;
+        top: 10px;
+        right: 30px;
+        flex-direction: column;
+        gap: 15px;
     }
+
     .social-links-header a {
-        font-size: 20px; /* גודל אחיד לאייקונים */
-        display: block; /* מסדר אותם בטור */
+        font-size: 20px;
+        display: block;
     }
 }
-
 
 @media (max-width: 600px) {
     h1 {
         font-size: 24px;
     }
+
     h2 {
         font-size: 20px;
     }
@@ -202,9 +202,11 @@ sa li.show {
 @media (max-width: 600px) {
     body {
         background-image: none;
-        background-color: #fdf9f3; /* שמירה על צבע הרקע */
+        background-color: #fdf9f3;
     }
 }
+
+
 
 
 
@@ -234,7 +236,7 @@ sa li.show {
 
         <p class="fade-in">🍀 בימי קדם, בכל משפחה שבט או כפר, הייתה "רוקחת הכפר" - זאת שידעה את סודות הצמחים, רקחה מהם מרקחות, השתמשה בהם לריפוי ולטיפוח לכל הסובבים אותה. בכל בית היו צנצנות מלאות במרקחות מרפא מצמחים מקומיים לשימוש ולרפואת בני המשפחה והשבט...</p>
         <p class="fade-in">🍀 מאז שאני זוכרת את עצמי, בכל פעם שפגשתי בטיול, או במרעה עם העדר הקטן שלנו "אישה חכמה" – כזאת שמלקטת צמחים בצדי הדרכים, הייתי שואלת אותה ולומדת ממנה. ככל ששאלתי וחקרתי העמיק בי הרצון ללמוד עוד ובשנת 2007 יצאתי למסע ארוך ומרתק של לימודי רפואה טבעית והוליסטית.</p>
-         <p class="fade-in">🍀 לאחר שנים של לימוד מעמיק, ניסיון, ועבודה בקליניקה - הקמתי מתוך תשוקה גדולה את "מתנת האדמה- הבית לרוקחות טבעית."</p>
+        <p class="fade-in">🍀 לאחר שנים של לימוד מעמיק, ניסיון, ועבודה בקליניקה - הקמתי מתוך תשוקה גדולה את "מתנת האדמה- הבית לרוקחות טבעית."</p>
 
 <video class="fade-in" width="100%" controls poster = "images/thumbnail.png">
     <source src="images/atmosphere.mp4" type="video/mp4">
