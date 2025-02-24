@@ -207,7 +207,9 @@ button {
 	
 @media (max-width: 767px) {
   .wrapper {
-    background-size: contain;
+    background: url("../images/bg-registration-form-7.jpg") no-repeat center center;
+    background-size: cover;
   }
 }
+
 /*# sourceMappingURL=style.css.map */
