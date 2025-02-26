@@ -142,25 +142,47 @@ ul li::before {
     font-size: 20px;
 }
 
+/* כפתורי הסושיאל לינקס בפינה הימנית */
 .social-links-header {
     position: fixed;
-    top: 10px;
-    right: 30px;
-    display: flex;
-    gap: 15px;
-    z-index: 1000;
+    bottom: 60px; /* מציב את הסושיאל לינקס קצת מעל כפתור צור קשר */
+    right: 20px;
+    text-align: center;
 }
 
 .social-links-header a {
-    font-size: 30px;
+    margin: 5px;
+    font-size: 18px;
+    color: #333; /* צבע טקסט רגיל, בלי רקע */
     text-decoration: none;
-    color: inherit;
-    transition: transform 0.2s ease;
+    padding: 10px;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 .social-links-header a:hover {
-    transform: scale(1.2);
+    background-color: #e0e0e0; /* צבע רקע בה-hover אם רוצים */
 }
+
+/* כפתור הניווט בפינה הימנית */
+.btn-footer-nav {
+    position: fixed;
+    bottom: 20px; /* הכפתור יהיה מתחת לסושיאל לינקס */
+    right: 20px;
+    background-color: #6c935c; /* רקע ירוק לכפתור */
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-footer-nav:hover {
+    background-color: #587a46; /* צבע רקע כשהכפתור נלחץ */
+}
+
+
 
 .social-links-header .instagram {
     color: #E4405F;
@@ -218,11 +240,11 @@ ul li::before {
 
 .slide-in-text {
     opacity: 0;
-    transform: translateX(100%);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transform: translateX(30px); /* יתחיל מימין */
+    transition: opacity 0.5s, transform 1.2s;
 }
 
-.show {
+.slide-in-text.show {
     opacity: 1;
     transform: translateX(0);
 }
@@ -251,6 +273,7 @@ ul li::before {
     </a>
 
 </div>
+    <a href="#contact" class="btn-footer-nav">צור קשר</a> <!-- הכפתור החדש -->
 
     <img class="circle-image" src="images/logo.jpg" alt="לוגו מתנת האדמה" width="100%" height="100%">
 	<h1> הצטרפו למסע חווייתי לעולם הרוקחות הטבעית – וגלו את הקסם שבצמחים 🌼</h1>
